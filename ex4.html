@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Ex 4</title>
+            <script src="index.js"></script>
+            <script>
+
+            let array = [1, 3, 5, 6, 9, 10, 2];
+            let result = f4(3, 5, array);
+
+                let f4 =(a, b, l) => {
+                    let sum = 0;
+                    for(let i = 0; i < l.length; i++){
+                        if (l[i] % a === 0 || l[i] % b === 0) {
+                            sum += l[i];
+                        }
+                    }
+                    return sum;
+                        
+                };
+
+                alert("Sum is: " + result);
+
+            </script>
+    </head>
+    <body>
+
+        <h2>Sum of all multiples of 3 or 5</h2>
+
+    </body>
+</html>
