@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Ex 4</title>
+        <script src="index.js"></script>
+        <script>
+
+        let calculateSum = () => {
+                let a = parseInt(document.getElementById('num1').value);
+                let b = parseInt(document.getElementById('num2').value);
+                let l = parseInt(document.getElementById('array').value);
+
+                let sum = 0;
+                for(let i = 0; i<l.length; i++){
+                    if(l[i] %a ===0 || l[i] %b === 0){
+                            sum += i;
+
+                    }
+                } 
+                            alert("The sum of multiples of " + a + " or " + b + " below " + l + " is: " + sum);
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Exercise 4.1:</h3>
+        <label for="num1">a: </label>
+        <input type = "number" id= "num1"><br><br>
+        
+        <label for="num2">b: </label>
+        <input type = "number" id= "num2"><br><br>
+
+        <label for="num3">l: </label>
+        <input type = "number" id= "array"><br><br>
+        <button onclick="calculateSum()">Find Sum</button>
+
+    </body>
+</html>
