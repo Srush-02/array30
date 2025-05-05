@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Exp: 6a</title>
+        <script src = "exp6index.js"></script>
+    </head>
+    <body>
+        <h2>Exercise 6a: Sum of All Multiples</h2>
+        <label for="a">Enter array A : </label><br>
+        <input type="text" id="a"><br><br>
+
+        <label for="numbers">Enter array l : </label><br>
+        <input type="text" id="numbers" ><br><br>
+
+        <button onclick="calculate()">Calculate Sum</button>
+
+        <script>
+            let calculate = () => {
+            let aStr = document.getElementById("a").value;
+            let lStr = document.getElementById("l").value;
+
+            let a = aStr.split(',').map(x => parseInt(x.trim()));
+            let l = lStr.split(',').map(x => parseInt(x.trim()));
+
+            let result = f6(a, l);
+            alert("Sum of multiples: " + result);
+    }
+        </script>
+    </body>
+</html>
