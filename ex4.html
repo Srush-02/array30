@@ -7,7 +7,7 @@
         let calculateSum = () => {
                 let a = parseInt(document.getElementById('num1').value);
                 let b = parseInt(document.getElementById('num2').value);
-                let lStr = document.getElementById('array');
+                let lStr = document.getElementById('array').value;
 
                 let lArray = lStr.split(',').map(item => parseInt(item.trim())).filter(num => !isNaN(num));
                 let result = f4(a, b, lArray);
