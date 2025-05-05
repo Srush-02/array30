@@ -1,34 +1,22 @@
 <html>
     <head>
-        <title>Ex 4</title>
-        
-        
+        <title> Ex 4</title>
+            <script src="ex4index.js"></script>
     </head>
     <body>
-        <h3>Exercise 4.1:</h3>
-        <label for="num1">a: </label>
-        <input type = "number" id= "num1"><br><br>
-        
-        <label for="num2">b: </label>
-        <input type = "number" id= "num2"><br><br>
 
-        <label for="array">l: </label>
-        <textarea id="array" rows="4" cols="20"></textarea>
+        <h2>Sum of all multiples of 3 or 5</h2>
+        <h3>array: [1, 3, 5, 6, 9, 10, 2]</h3>
+        <p id="output"></p>
 
-        <button onclick="calculateSum()">Find Sum</button>
-
-        <script src="ex4index.js"></script>
         <script>
+            window.onload = function() {
+            let array = [1, 3, 5, 6, 9, 10, 2];
+            let result = f4(3, 5, array);
+            document.getElementById("output").textContent = "Sum is: " + result;
+        };
 
-            let calculateSum = () => {
-                    let a = parseInt(document.getElementById('num1').value);
-                    let b = parseInt(document.getElementById('num2').value);
-                    let lStr = document.getElementById('array').value;
-    
-                    let lArray = lStr.split(',').map(item => parseInt(item.trim())).filter(num => !isNaN(num));
-                    let result = f4(a, b, lArray);
-                    alert("Sum of multiples of " + a + " or " + b + " is: " + result);
-                }
-            </script>
+        </script>
+
     </body>
 </html>
