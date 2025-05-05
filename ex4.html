@@ -1,19 +1,8 @@
 <html>
     <head>
         <title>Ex 4</title>
-        <script src="index.js"></script>
-        <script>
-
-        let calculateSum = () => {
-                let a = parseInt(document.getElementById('num1').value);
-                let b = parseInt(document.getElementById('num2').value);
-                let lStr = document.getElementById('array').value;
-
-                let lArray = lStr.split(',').map(item => parseInt(item.trim())).filter(num => !isNaN(num));
-                let result = f4(a, b, lArray);
-                alert("Sum of multiples of " + a + " or " + b + " is: " + result);
-            }
-        </script>
+        
+        
     </head>
     <body>
         <h3>Exercise 4.1:</h3>
@@ -28,5 +17,18 @@
 
         <button onclick="calculateSum()">Find Sum</button>
 
+        <script src="index.js"></script>
+        <script>
+
+            let calculateSum = () => {
+                    let a = parseInt(document.getElementById('num1').value);
+                    let b = parseInt(document.getElementById('num2').value);
+                    let lStr = document.getElementById('array').value;
+    
+                    let lArray = lStr.split(',').map(item => parseInt(item.trim())).filter(num => !isNaN(num));
+                    let result = f4(a, b, lArray);
+                    alert("Sum of multiples of " + a + " or " + b + " is: " + result);
+                }
+            </script>
     </body>
 </html>
