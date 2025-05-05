@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Exercise: 5.1</title>
+            
+    </head>
+    <body>
+        <h2>sum of all the multiples of factors in a found in in l</h2>
+        
+        <label for="a"> a:</label><br>
+        <input type="text" id="a" placeholder="e.g. 2,3" size="50"><br><br>
+      
+        <label for="lInput">Array l:</label><br>
+        <input type="text" id="lInput" placeholder="e.g. 1,2,3,4,5,6" size="50"><br><br>
+      
+        <button onclick="calSum()">Calculate</button>
+
+            <script src="ex5Index.js"></script>
+
+          <script>
+            function calSum() {
+              let aStr = document.getElementById("a").value;
+              let lStr = document.getElementById("lInput").value;
+        
+              let a = aStr.split(",").map(Number);
+              let l = lStr.split(",").map(Number);
+        
+              if (a.length !== 2) {
+                alert("'a' must have 2 integers.");
+                return;
+              }
+        
+              let result = f5(a, l);
+              alert("The sum of multiples is: " + result);
+            }
+          </script>
+    </body>
+</html>
