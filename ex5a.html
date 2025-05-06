@@ -21,8 +21,8 @@
               let aStr = document.getElementById("a").value;
               let lStr = document.getElementById("lInput").value;
         
-              let a = aStr.split(",").map(Number);
-              let l = lStr.split(",").map(Number);
+              let a = aStr.split(",");
+              let l = lStr.split(",");
         
               if (a.length !== 2) {
                 alert("'a' must have 2 integers.");
